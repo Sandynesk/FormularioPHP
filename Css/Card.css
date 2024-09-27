@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    display: flex; /* Usar flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da tela */
+    margin: 0; /* Remove margem padrão */
+    background-color: #f4f4f4; /* Cor de fundo padrão */
+    position: relative; /* Para a camada de fundo */
+}
+
+.background {
+    position: absolute; /* Camada de fundo fixa */
+    top: 0; /* Ocupa toda a tela */
+    left: 0; /* Ocupa toda a tela */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background: rgba(255, 255, 255, 0.5); /* Cor de fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de blur no fundo */
+    z-index: 1; /* Para ficar atrás do card */
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    text-align: center; /* Centraliza o conteúdo do card */
+    margin: 20px; /* Espaçamento entre cartões */
+    transition: transform 0.3s ease; /* Transição suave para hover */
+    z-index: 2; /* Para ficar acima do fundo */
+    max-width: 400px; /* Limita a largura máxima do card */
+    width: 100%; /* Ocupa 100% da largura disponível até o máximo */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Levanta o card ao passar o mouse */
+}
+
+.card h1 {
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    color: #3D3D3D; /* Cor do texto do título */
+}
+
+.card p {
+    font-size: 16px; /* Tamanho do texto da mensagem */
+    margin-bottom: 20px; /* Espaçamento abaixo da mensagem */
+    color: #616161; /* Cor do texto da mensagem */
+}
+
+.card button {
+    background-color: #FF008A; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda padrão */
+    border-radius: 20px; /* Borda arredondada */
+    padding: 10px 20px; /* Padding interno do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+.card button:hover {
+    background-color: #e6007a; /* Cor do botão ao passar o mouse */
+}
